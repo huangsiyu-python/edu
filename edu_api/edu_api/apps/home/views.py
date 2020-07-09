@@ -12,4 +12,4 @@ class BannerListAPIView(ListAPIView):
 class NavListAPIView(ListAPIView):
     queryset = Nav.objects.filter(is_show=True, is_delete=False,position=1).order_by("-orders")
     serializer_class = NavModelSerializer
-    print(queryset)
+    # print(queryset)

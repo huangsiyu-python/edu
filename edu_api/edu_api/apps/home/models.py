@@ -4,7 +4,7 @@ from home.BaseModel import BaseModel
 
 
 class Banner(models.Model):
-    img = models.ImageField(upload_to="banner", max_length=255, verbose_name="轮播图图片")
+    img = models.ImageField(upload_to="banner", max_length=255, verbose_name="轮播图图片",null=True,blank=True)
     title = models.CharField(max_length=200, verbose_name="轮播图标题")
     link = models.CharField(max_length=300, verbose_name="图片链接")
     is_show = models.BooleanField(default=False, verbose_name="是否显示图片")

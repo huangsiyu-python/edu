@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
-
+import datetime
 import os
 # BASE_DIR是根目录
 import sys
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'home',
+    'user',
     # x admin配置
     'xadmin',
     'crispy_forms',
@@ -89,8 +90,12 @@ WSGI_APPLICATION = 'edu_api.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': "edu_api3",
+        'HOST': "localhost",
+        'USER': "root",
+        'PASSWORD': '123456',
+        'PORT': 3306
     }
 }
 
@@ -195,4 +200,20 @@ LOGGING = {
 REST_FRAMEWORK = {
     # 全局异常配置
     "EXCEPTION_HANDLER": "utils.exceptions.exception_handler",
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ],
 }
+JWT_AUTH = {
+    # 有效时间
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=300),
+    # 自定义jwt返回值的格式方法
+    'JWT_RESPONSE_PAYLOAD_HANDLER': 'user.utils.jwt_response_payload_handler',
+}
+
+AUTH_USER_MODEL = 'user.UserInfo'
+AUTHENTICATION_BACKENDS = [
+    'user.utils.UserAuthBackend',
+]

@@ -11,7 +11,8 @@ import 'element-ui/lib/theme-chalk/index.css'
 
 Vue.use(Element);
 import settings from "./settings";
-
+// 导入极验
+import "../static/js/gt.js"
 Vue.prototype.$settings = settings;
 Vue.config.productionTip = false
 import "../static/css/global.css"
