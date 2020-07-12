@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f19ea86-c916-4ad1-aaaf-a47de1c91f5e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/edu_api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/edu_api/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edu_api/edu_api/apps/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/edu_api/edu_api/apps/user/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edu_api/edu_api/apps/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/edu_api/edu_api/apps/user/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edu_api/edu_api/settings/develop.py" beforeDir="false" afterPath="$PROJECT_DIR$/edu_api/edu_api/settings/develop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edu_api/logs/lesson_api.log" beforeDir="false" afterPath="$PROJECT_DIR$/edu_api/logs/lesson_api.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edu_client/src/components/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/edu_client/src/components/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edu_client/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/edu_client/src/router/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +32,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -63,6 +69,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -95,17 +102,18 @@
       <option name="presentableId" value="Default" />
       <updated>1594255221931</updated>
       <workItem from="1594255248634" duration="455000" />
-      <workItem from="1594312559042" duration="233000" />
+      <workItem from="1594312559042" duration="428000" />
+      <workItem from="1594563717486" duration="55000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="688000" />
+    <option name="totallyTimeSpent" value="938000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1172466" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11875945" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -119,7 +127,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.67096776" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.6698873" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />

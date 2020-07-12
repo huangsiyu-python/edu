@@ -33,7 +33,7 @@
                 <button id="get_code" class="btn btn-primary">获取验证码</button>
                 <button class="login_btn">登录</button>
                 <span class="go_login">没有账号
-                    <router-link to="/user/register/">立即注册</router-link>
+                   <span>立即注册</span>
                 </span>
             </div>
         </div>
