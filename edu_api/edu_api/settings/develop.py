@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     'xadmin',
     'crispy_forms',
     'reversion',
+    'ckeditor',  # 富文本编辑器
+    'ckeditor_uploader',  # 富文本编辑器的上传模块
 ]
 
 MIDDLEWARE = [
@@ -241,3 +243,11 @@ CACHES = {
         }
     },
 }
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',	# 展示哪些工具栏
+        'height': 300,	# 编辑器的高度
+        # 'width': 300,
+    },
+}
+CKEDITOR_UPLOAD_PATH = ''

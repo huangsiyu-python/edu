@@ -14,3 +14,4 @@ SINGLE_SEND_URL = "https://sms.yunpian.com/v2/sms/single_send.json"
 # 发送短信的AP IKEY
 # API_KEY = "40d6180426417bfc57d0744a362dc108"
 API_KEY = "f80d47199147d8ae4841f6ffc6b3869e"
+IMAGE_SRC="http://api.baizhishop.com:9001"

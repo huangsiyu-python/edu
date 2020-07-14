@@ -1,6 +1,8 @@
+from ckeditor_uploader.fields import RichTextUploadingField
 from django.db import models
 
 from course.BaseModel import BaseModel
+from edu_api.settings.constants import IMAGE_SRC
 
 
 class CourseCategory(BaseModel):
@@ -37,11 +39,12 @@ class Course(BaseModel):
         (1, '下线'),
         (2, '预上线'),
     )
+    course_video=models.FileField(upload_to="video",null=True,blank=True,verbose_name="视频")
     name = models.CharField(max_length=128, verbose_name="课程名称")
     course_img = models.ImageField(upload_to="course", max_length=255, verbose_name="封面图片", blank=True, null=True)
     course_type = models.SmallIntegerField(choices=course_type, default=0, verbose_name="付费类型")
     # 使用这个字段的原因
-    brief = models.TextField(max_length=2048, verbose_name="详情介绍", null=True, blank=True)
+    brief = RichTextUploadingField(max_length=2048, verbose_name="详情介绍", null=True, blank=True)
     level = models.SmallIntegerField(choices=level_choices, default=1, verbose_name="难度等级")
     pub_date = models.DateField(verbose_name="发布日期", auto_now_add=True)
     period = models.IntegerField(verbose_name="建议学习周期(day)", default=7)
@@ -78,6 +81,16 @@ class Course(BaseModel):
             })
 
         return data_list
+
+    @property
+    def level_name(self):
+        return self.level_choices[self.level][1]
+
+    @property
+    def brief_html(self):
+        # src="/media/2020/07/14/fullsizerender.jpg
+        brief=self.brief.replace('src="/media','src="%s/media' % IMAGE_SRC)
+        return brief
 
 
 class Teacher(BaseModel):

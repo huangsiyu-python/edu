@@ -16,7 +16,7 @@
                 </div>
                 <div class="wrap-right">
                     <h3 class="course-name">{{course.name}}</h3>
-                    <p class="data">{{course.students}}人在学&nbsp;&nbsp;&nbsp;&nbsp;课程总时长：{{course.lessons}}&nbsp;&nbsp;&nbsp;&nbsp;难度：{{course.level}}</p>
+                    <p class="data">{{course.students}}人在学&nbsp;&nbsp;&nbsp;&nbsp;课程总时长：{{course.lessons}}&nbsp;&nbsp;&nbsp;&nbsp;难度：{{course.level_name}}</p>
                     <div class="sale-time">
                         <p class="sale-type">限时免费</p>
                         <p class="expire">距离结束：仅剩 110天 13小时 33分 <span class="second">08</span> 秒</p>
@@ -24,7 +24,7 @@
                     <p class="course-price">
                         <span>活动价</span>
                         <span class="discount">¥0.00</span>
-                        <span class="original">{{course.price}}</span>
+                        <span class="original">¥{{course.price}}</span>
                     </p>
                     <div class="buy">
                         <div class="buy-btn">
@@ -47,54 +47,25 @@
             <div class="course-content">
                 <div class="course-tab-list">
                     <div class="tab-item" v-if="tabIndex==1">
-                        <p><img alt=""
-                                src=""
-                                width="840"></p>
-                        <p><img alt=""
-                                src=""
-                                width="840"></p>
-                        <p><img alt=""
-                                src=""
-                                width="840"></p>
+                      <div v-html="course.brief_html"></div>
                     </div>
                     <div class="tab-item" v-if="tabIndex==2">
                         <div class="tab-item-title">
                             <p class="chapter">课程章节</p>
-                            <p class="chapter-length">共8章 75个课时</p>
+                            <p class="chapter-length">共{{chapter_list.length}}章 {{course.lessons}}个课时</p>
                         </div>
-                        <div class="chapter-item">
-                            <p class="chapter-title"><img src="/static/image/python.png" alt="">第1章·Vue简介</p>
+                        <div class="chapter-item" v-for="chapter in chapter_list">
+                            <p class="chapter-title"><img src="/static/image/python.png" alt="">第{{chapter.chapter}}章·{{chapter.name}}</p>
                             <ul class="lesson-list">
-                                <li class="lesson-item">
-                                    <p class="name"><span class="index">1-1</span> Vue基本介绍<span class="free">免费</span>
-                                    </p>
-                                    <p class="time">07:30 <img src="/static/image/python.png"></p>
-                                    <button class="try">立即试学</button>
-                                </li>
-                                <li class="lesson-item">
-                                    <p class="name"><span class="index">1-2</span> Vue的双向绑定<span class="free">免费</span>
+                                <li class="lesson-item" v-for="(lesson,key) in chapter.coursesections">
+                                    <p class="name"><span class="index">{{chapter.chapter}}-{{key+1}}</span> {{lesson.name}}
+                                      <span class="free" v-if="lesson.free_trail">免费</span>
                                     </p>
                                     <p class="time">07:30 <img src="/static/image/python.png"></p>
                                     <button class="try">立即试学</button>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="chapter-item">
-                            <p class="chapter-title"><img src="/static/image/python.png" alt="">第2章·Vue发展过程</p>
-                            <ul class="lesson-list">
-                                <li class="lesson-item">
-                                    <p class="name"><span class="index">2-1</span> Vue脚手架</p>
-                                    <p class="time">07:30 <img src="/static/image/python.png"></p>
-                                    <button class="try">立即购买</button>
-                                </li>
-                                <li class="lesson-item">
-                                    <p class="name"><span class="index">2-2</span> Vue的路由</p>
-                                    <p class="time">07:30 <img src="/static/image/python.png"></p>
-                                    <button class="try">立即购买</button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                        </div></div>>
                     <div class="tab-item" v-if="tabIndex==3">
                         用户评论
                     </div>
@@ -113,7 +84,7 @@
                                     <p class="teacher-title">{{course.teacher.signature}}</p>
                                 </div>
                             </div>
-                            <p class="narrative">{{course.teacher.title}}{{course.teacher.role}}{{course.teacher.brief}}</p>
+                            <p class="narrative">{{course.teacher.brief}}</p>
                         </div>
                     </div>
                 </div>
@@ -133,9 +104,13 @@
         name: "CourseDetail",
         data() {
             return {
+              id:'',
                 course_id: "",
-              course:{},
-              teacher:{},
+              course:{
+                  teacher:{}
+              },
+              // teacher:{},
+              chapter_list:[],
               course_chapter:{},
                 tabIndex: 2,
                 playerOptions: {
@@ -160,11 +135,26 @@
         methods: {
           get_course_id(id){
             let course_id=this.$route.params.id;
+            this.id = course_id;
             console.log(course_id);
             this.$axios(`${this.$settings.HOST}course/list_course/`+`${course_id}/`
             ).then(res=>{
               console.log(res.data);
               this.course=res.data;
+              // this.course_id=course_id;
+            })
+          },
+          get_course_chapter(){
+            this.$axios.get(`${this.$settings.HOST}course/chapter/`,{
+              params:{
+                course:this.id
+              }
+            }).then(res=>{
+              console.log(this.id,123);
+              this.chapter_list=res.data;
+              console.log(this.chapter_list,111)
+            }).catch(error=>{
+              console.log(error)
             })
           },
             onPlayerPlay(event) {
@@ -175,7 +165,8 @@
             }
         },
         created() {
-        this.get_course_id()
+        this.get_course_id();
+          this.get_course_chapter();
         },
         components: {
             Header, Footer, videoPlayer
