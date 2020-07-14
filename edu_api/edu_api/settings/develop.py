@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'home',
     'user',
+    'course',
     # x admin配置
     'xadmin',
     'crispy_forms',

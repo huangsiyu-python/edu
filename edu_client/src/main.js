@@ -16,6 +16,11 @@ import "../static/js/gt.js"
 Vue.prototype.$settings = settings;
 Vue.config.productionTip = false
 import "../static/css/global.css"
+require('video.js/dist/video-js.css');
+require('vue-video-player/src/custom-theme.css');
+import VideoPlayer from 'vue-video-player'
+
+Vue.use(VideoPlayer);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
