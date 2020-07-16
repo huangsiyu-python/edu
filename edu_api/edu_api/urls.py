@@ -20,6 +20,7 @@ from django.views.static import serve
 from xadmin.plugins import xversion
 
 from django.conf import settings
+
 xversion.register_models()
 
 urlpatterns = [
@@ -29,5 +30,6 @@ urlpatterns = [
     path("home/", include("home.urls")),
     path("user/", include("user.urls")),
     path("course/", include("course.urls")),
-path("ckeditor/", include("ckeditor_uploader.urls")),
+    path("ckeditor/", include("ckeditor_uploader.urls")),
+    path("cart/",include("cart.urls"))
 ]

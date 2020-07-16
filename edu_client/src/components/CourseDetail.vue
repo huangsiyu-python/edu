@@ -31,7 +31,7 @@
                             <button class="buy-now">立即购买</button>
                             <button class="free">免费试学</button>
                         </div>
-                        <div class="add-cart"><img src="/static/image/python.png" alt="">加入购物车</div>
+                        <div class="add-cart" @click="addCart"><img src="/static/image/python.png" alt="">加入购物车</div>
                     </div>
                 </div>
             </div>
@@ -133,13 +133,42 @@
             }
         },
         methods: {
+          check_user_login(){
+            let token =localStorage.user_token||sessionStorage.user_token;
+            if(!token){
+              let self=this;
+              this.$confirm("请先登录在添加购物车",{
+                callback(){
+                  self.$router.push("/home/login/");
+                }
+              });
+              return false
+            }
+            return token;
+          },
+          addCart(){
+            let token=this.check_user_login();
+            this.$axios.post(`${this.$settings.HOST}cart/option/`,{
+              course_id:this.id,
+            },{
+              headers:{
+                "Authorization":"jwt "+token,
+              }
+            }).then(response=>{
+              // console.log(response.data);
+              this.$message.success(response.data.message);
+              this.$store.commit("add_cart",response.data.cart_length)
+            }).catch(error=>{
+              console.log(error.response);
+            })
+          },
           get_course_id(id){
             let course_id=this.$route.params.id;
             this.id = course_id;
-            console.log(course_id);
+            // console.log(course_id);
             this.$axios(`${this.$settings.HOST}course/list_course/`+`${course_id}/`
             ).then(res=>{
-              console.log(res.data);
+              // console.log(res.data);
               this.course=res.data;
               // this.course_id=course_id;
             })
@@ -157,6 +186,21 @@
               console.log(error)
             })
           },
+          //           addCart(){
+          //   let token=this.check_user_login();
+          //   this.$axios.post(`${this.$settings.HOST}cart/option/`,{
+          //     course_id:this.course_id,
+          //   },{
+          //     headers:{
+          //       "Authorization":"jwt "+token,
+          //     }
+          //   }).then(response=>{
+          //     console.log(course_id);
+          //     console.log(response.data)
+          //   }).catch(error=>{
+          //     console.log(error.response);
+          //   })
+          // },
             onPlayerPlay(event) {
 
             },

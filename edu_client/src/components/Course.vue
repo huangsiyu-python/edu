@@ -122,7 +122,7 @@
                 this.$axios.get(`${this.$settings.HOST}course/list_filter/`, {
                     params: filters
                 }).then(response => {
-                    console.log(response.data);
+                    // console.log(response.data);
                     // this.course_list = response.data;
                     this.course_list = response.data.results;
                     this.total = response.data.count;
