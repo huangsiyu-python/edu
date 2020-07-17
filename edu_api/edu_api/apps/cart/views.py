@@ -3,7 +3,7 @@ import logging
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import status
-from course.models import Course
+from course.models import Course, CourseExpire
 from django_redis import get_redis_connection
 from rest_framework.permissions import IsAuthenticated
 
@@ -28,8 +28,8 @@ class CartViewSet(ViewSet):
             redis_connection=get_redis_connection("cart")
             pipeline=redis_connection.pipeline()
             pipeline.multi()
-            pipeline.hset("cart_%s" % user_id,course_id,expire)
-            pipeline.sadd("select_%s" % user_id,course_id)
+            pipeline.hset("cart_%s" % user_id, course_id, expire)
+            pipeline.sadd("selected_%s" % user_id, course_id)
             # course_len=redis_connection.hlen('cart_%s' % user_id)
             # print("course_len",course_len)
             pipeline.execute()
@@ -56,13 +56,17 @@ class CartViewSet(ViewSet):
                 continue
 
             data.append(({
-                "selected":False if course_id_bytes in select_list_bytes else True,
-                "course_img":constants.IMAGE_SRC+course.course_img.url  ,
+                "selected":True if course_id_bytes in select_list_bytes else False,
+                "course_img":constants.IMAGE_SRC+course.course_img.url,
                 "name":course.name,
                 "id":course.id,
                 "expire_id":expire_id,
-                "price":course.price
+                "price":course.price,
+                # 购物车列表需要课程有效期
+                "expire_list": course.expire_list,
+                "real_price": course.real_expire_price(expire_id),
             }))
+        # print(data)
         return Response(data)
 
     def change_select(self,request):
@@ -87,3 +91,22 @@ class CartViewSet(ViewSet):
         redis_connection.hdel(course_id)
         print(user_id,course_id)
         return Response({"message":"删除成功"})
+    def change_expire(self, request):
+        user_id = request.user.id
+        expire_id = request.data.get("expire_id")
+        course_id = request.data.get("course_id")
+        print(course_id, expire_id)
+        try:
+            course = Course.objects.get(is_show=True, is_delete=False, id=course_id)
+            if expire_id > 0:
+                expire_iem = CourseExpire.objects.filter(is_show=True, is_delete=False, id=expire_id)
+                if not expire_iem:
+                    raise Course.DoesNotExist()
+        except Course.DoesNotExist:
+            return Response({"message": "课程信息不存在"}, status=status.HTTP_400_BAD_REQUEST)
+
+        connection = get_redis_connection("cart")
+        connection.hset("cart_%s" % user_id, course_id, expire_id)
+        real_price = course.real_expire_price(expire_id)
+        return Response({"message": "切换有效期成功", "real_price": real_price})
+
