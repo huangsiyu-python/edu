@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'user',
     'course',
     'cart',
+    'order',
     # x admin配置
     'xadmin',
     'crispy_forms',
@@ -212,7 +213,7 @@ REST_FRAMEWORK = {
 }
 JWT_AUTH = {
     # 有效时间
-    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=3000),
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=30000),
     # 自定义jwt返回值的格式方法
     'JWT_RESPONSE_PAYLOAD_HANDLER': 'user.utils.jwt_response_payload_handler',
 }

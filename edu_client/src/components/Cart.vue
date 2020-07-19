@@ -15,14 +15,15 @@
           <span class="do_more">操作</span>
         </div>
         <div class="cart_course_list">
-          <CartItem v-for="(course,index) in cart_list" :key="index" :course="course"></CartItem>
+          <CartItem v-for="(course,index) in cart_list" :key="index" :course="course"
+                    @delete_course="del_cart(index)" @change_select="cart_total_price"></CartItem>
 
         </div>
         <div class="cart_footer_row">
           <span class="cart_select"><label> <el-checkbox></el-checkbox><span>全选</span></label></span>
           <span class="cart_delete"><i class="el-icon-delete"></i> <span>删除</span></span>
-          <span class="goto_pay">去结算</span>
-          <span class="cart_total">总计：¥0.0</span>
+          <router-link class="goto_pay" to="/order">去结算</router-link>
+          <span class="cart_total">总计：¥{{total_price}}</span>
         </div>
       </div>
     </div>
@@ -43,9 +44,19 @@
     data(){
       return{
         cart_list:[],
+        total_price:0.00
       }
     },
     methods: {
+      cart_total_price(){
+        let total=0;
+        this.cart_list.forEach((course,key)=>{
+          if (course.selected){
+            total +=parseFloat(course.real_price);
+          }
+          this.total_price=total;
+        })
+      },
       check_user_login() {
         let token = localStorage.user_token || sessionStorage.user_token;
         if (!token) {
@@ -66,12 +77,18 @@
             "Authorization":"jwt "+token,
           }
         }).then(response=>{
-          console.log(response.data);
+          // console.log(response.data);
           this.cart_list=response.data;
-          this.$store.commit("add_cart",this.cart_list.length)
+          this.$store.commit("add_cart",this.cart_list.length);
+          this.cart_total_price();
         }).catch(error=>{
           console.log(error.response)
         })
+      },
+      del_cart(index){
+        this.cart_list.splice(key,1);
+        this.$store.commit("add_cart",this.cart_list.length);
+        this.cart_total_price();
       },
     },
     components: {

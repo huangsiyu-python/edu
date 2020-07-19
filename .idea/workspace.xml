@@ -6,14 +6,13 @@
       <change beforePath="$PROJECT_DIR$/edu_api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/edu_api/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/edu_api/edu_api/apps/cart/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/edu_api/edu_api/apps/cart/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/edu_api/edu_api/apps/cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/edu_api/edu_api/apps/cart/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edu_api/edu_api/apps/course/adminx.py" beforeDir="false" afterPath="$PROJECT_DIR$/edu_api/edu_api/apps/course/adminx.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edu_api/edu_api/apps/course/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/edu_api/edu_api/apps/course/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edu_api/edu_api/apps/course/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/edu_api/edu_api/apps/course/serializer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/edu_api/edu_api/settings/develop.py" beforeDir="false" afterPath="$PROJECT_DIR$/edu_api/edu_api/settings/develop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edu_api/edu_api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/edu_api/edu_api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/edu_api/logs/lesson_api.log" beforeDir="false" afterPath="$PROJECT_DIR$/edu_api/logs/lesson_api.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edu_client/src/components/Course.vue" beforeDir="false" afterPath="$PROJECT_DIR$/edu_client/src/components/Course.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edu_client/src/components/CourseDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/edu_client/src/components/CourseDetail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edu_client/src/components/Cart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/edu_client/src/components/Cart.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edu_client/src/components/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/edu_client/src/components/Login.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/edu_client/src/components/common/CartItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/edu_client/src/components/common/CartItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edu_client/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/edu_client/src/router/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,15 +110,26 @@
       <workItem from="1594702511517" duration="745000" />
       <workItem from="1594742634923" duration="168000" />
       <workItem from="1594863125468" duration="172000" />
-      <workItem from="1594955646437" duration="49000" />
+      <workItem from="1594955646437" duration="867000" />
+      <workItem from="1595172431928" duration="611000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2171000" />
+    <option name="totallyTimeSpent" value="3600000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.12178517" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -130,12 +140,12 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32903227" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.66344607" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.66129035" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />

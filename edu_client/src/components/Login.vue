@@ -17,7 +17,7 @@
                 <div id="geetest1"></div>
                 <div class="rember">
                     <p>
-                        <input type="checkbox" class="no"v-model="remember_me" />
+                        <input type="checkbox" class="no" v-model="remember_me" />
                         <span>记住密码</span>
                     </p>
                     <p>忘记密码</p>

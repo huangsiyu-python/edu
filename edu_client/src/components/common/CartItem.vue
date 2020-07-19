@@ -12,7 +12,7 @@
         <el-option :label="item.expire_text" :value="item.id" :key="item.id" v-for="item in course.expire_list"></el-option></el-select>
     </div>
     <div class="cart_column column_4">{{course.real_price}}</div>
-    <div class="cart_column column_4" @click="del">删除</div>
+    <div class="cart_column column_4" @click="delete_course">删除</div>
   </div>
 </template>
 
@@ -30,18 +30,20 @@
       }
     },
     methods: {
-      del() {
+      delete_course() {
         let token = localStorage.user_token || sessionStorage.user_token;
         this.$axios.delete(`${this.$settings.HOST}cart/option/`, {
-          selected: this.course.selected,
-          course_id: this.course.id,
-        }, {
+          params:{
+            selected: this.course.selected,
+            course_id: this.course.id,
+        },
           headers: {
             "Authorization": "jwt " + token,
           }
         }).then(response => {
           this.$message.success(response.data.message);
-          window.reload()
+          this.$emit("delete_course");
+          // window.reload()
         }).catch(error => {
           this.$message.error(error.response)
         })
@@ -57,6 +59,7 @@
           }
         }).then(response => {
           this.$message.success(response.data.message);
+          this.$emit("change_select")
         }).catch(error => {
           this.$message.error(error.response)
         })
@@ -71,8 +74,9 @@
             "Authorization": "jwt " + token,
           }
         }).then(response=>{
-          console.log(response.data);
-          this.course.real_price = response.data.real_price
+          // console.log(response.data);
+          this.course.real_price = response.data.real_price;
+          this.$emit("change_select")
           // location.reload()
         }).catch(error=>{
           console.log(error)

@@ -6,14 +6,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/edu_api/apps/cart/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/edu_api/apps/cart/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/edu_api/apps/cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/edu_api/apps/cart/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edu_api/apps/course/adminx.py" beforeDir="false" afterPath="$PROJECT_DIR$/edu_api/apps/course/adminx.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edu_api/apps/course/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/edu_api/apps/course/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/edu_api/apps/course/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/edu_api/apps/course/serializer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/edu_api/settings/develop.py" beforeDir="false" afterPath="$PROJECT_DIR$/edu_api/settings/develop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edu_api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/edu_api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/lesson_api.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/lesson_api.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edu_client/src/components/Course.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../edu_client/src/components/Course.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../edu_client/src/components/CourseDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../edu_client/src/components/CourseDetail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edu_client/src/components/Cart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../edu_client/src/components/Cart.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edu_client/src/components/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../edu_client/src/components/Login.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../edu_client/src/components/common/CartItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../edu_client/src/components/common/CartItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../edu_client/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../edu_client/src/router/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,13 +21,91 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/edu_api$manage.coverage" NAME="manage Coverage Results" MODIFIED="1594954059012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/edu_api$manage.coverage" NAME="manage Coverage Results" MODIFIED="1595172860678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu_api/apps/order/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="359">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu_api/apps/cart/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="88" selection-start-line="88" selection-end-line="107" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+                <element signature="e#477#1590#0" />
+                <element signature="e#1634#2821#0" />
+                <element signature="e#2869#3488#0" />
+                <element signature="e#3536#4383#0" />
+                <element signature="e#5061#6871#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/edu_api/apps/order/serializers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="79" column="34" lean-forward="true" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu_api/apps/order/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="49" column="10" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu_api/apps/cart/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/edu_api/apps/order/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -64,14 +141,22 @@
         <option value="$PROJECT_DIR$/edu_api/apps/course/urls.py" />
         <option value="$PROJECT_DIR$/edu_api/apps/course/views.py" />
         <option value="$PROJECT_DIR$/edu_api/settings/constants.py" />
-        <option value="$PROJECT_DIR$/edu_api/urls.py" />
         <option value="$PROJECT_DIR$/edu_api/apps/course/adminx.py" />
-        <option value="$PROJECT_DIR$/edu_api/settings/develop.py" />
         <option value="$PROJECT_DIR$/edu_api/apps/course/serializer.py" />
-        <option value="$PROJECT_DIR$/edu_api/apps/cart/urls.py" />
         <option value="$USER_HOME$/Desktop/day7/day7/code/edu_api/edu_api/apps/cart/views.py" />
         <option value="$PROJECT_DIR$/edu_api/apps/course/models.py" />
+        <option value="$PROJECT_DIR$/edu_api/apps/cart/urls.py" />
         <option value="$PROJECT_DIR$/edu_api/apps/cart/views.py" />
+        <option value="$PROJECT_DIR$/edu_api/apps/order/models.py" />
+        <option value="$PROJECT_DIR$/edu_api/apps/order/adminx.py" />
+        <option value="$PROJECT_DIR$/edu_api/apps/order/apps.py" />
+        <option value="$PROJECT_DIR$/edu_api/apps/order/__init__.py" />
+        <option value="$PROJECT_DIR$/edu_api/apps/order/serialisers.py" />
+        <option value="$PROJECT_DIR$/edu_api/urls.py" />
+        <option value="$PROJECT_DIR$/edu_api/settings/develop.py" />
+        <option value="$PROJECT_DIR$/edu_api/apps/order/views.py" />
+        <option value="$PROJECT_DIR$/edu_api/apps/order/urls.py" />
+        <option value="$PROJECT_DIR$/edu_api/apps/order/serializers.py" />
       </list>
     </option>
   </component>
@@ -81,7 +166,9 @@
     <option name="width" value="672" />
     <option name="height" value="764" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -118,7 +205,13 @@
               <item name="edu_api" type="462c0819:PsiDirectoryNode" />
               <item name="edu_api" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="course" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="edu_api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="edu_api" type="462c0819:PsiDirectoryNode" />
+              <item name="edu_api" type="462c0819:PsiDirectoryNode" />
+              <item name="settings" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -128,18 +221,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Django\baizhi\edu_api\edu_api\apps\order" />
       <recent name="G:\Django\baizhi\edu_api\edu_api\apps\course" />
       <recent name="G:\Django\baizhi\edu_api\utils" />
       <recent name="G:\Django\baizhi\edu_api\edu_api\settings" />
       <recent name="G:\Django\baizhi\edu_api\edu_api\libs" />
-      <recent name="G:\Django\baizhi\edu_api\edu_api\apps\user" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -257,22 +350,24 @@
       <workItem from="1594859579757" duration="1831000" />
       <workItem from="1594902320432" duration="8004000" />
       <workItem from="1594913949368" duration="2764000" />
-      <workItem from="1594949670562" duration="5894000" />
+      <workItem from="1594949670562" duration="7250000" />
+      <workItem from="1595137277589" duration="17908000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97785000" />
+    <option name="totallyTimeSpent" value="117049000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.36535552" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.1709531" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18709677" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.43387097" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -281,7 +376,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32096773" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -289,41 +384,34 @@
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25945538" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37741935" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.25255972" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Desktop/code/edu_api/edu_api/settings/develop.py" />
-    <entry file="file://$USER_HOME$/Desktop/code/edu_api/edu_api/apps/user/urls.py" />
-    <entry file="file://$USER_HOME$/Desktop/code/edu_api/edu_api/urls.py" />
-    <entry file="file://$PROJECT_DIR$/edu_api/libs/geetest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1121">
-          <caret line="137" column="23" selection-start-line="137" selection-start-column="23" selection-end-line="137" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/code/edu_api/edu_api/apps/user/views.py" />
-    <entry file="file://$PROJECT_DIR$/edu_api/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/src/router/index.js" />
-    <entry file="file://$PROJECT_DIR$/edu_api/settings/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/edu_api/edu_api/apps/user/serializers.py" />
     <entry file="file://$USER_HOME$/Desktop/edu_api/edu_api/settings/constants.py" />
     <entry file="file://$USER_HOME$/Desktop/edu_api/edu_api/apps/user/urls.py" />
     <entry file="file://$USER_HOME$/Desktop/edu_api/edu_api/apps/user/views.py" />
@@ -411,16 +499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/edu_api/apps/user/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="26" column="24" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/edu_api/apps/course/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -432,16 +510,6 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Desktop/cart.html" />
-    <entry file="file://$PROJECT_DIR$/edu_api/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="e#631#644#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/edu_api/settings/constants.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -449,30 +517,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/day7/day7/code/edu_api/edu_api/apps/course/adminx.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/day7/day7/code/src/components/CourseDetail.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="218" column="55" selection-start-line="218" selection-start-column="55" selection-end-line="218" selection-end-column="55" />
-          <folding>
-            <element signature="e#1033#1039#0" expanded="true" />
-            <element signature="n#p#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" />
-            <element signature="e#6172#7209#0" />
-            <element signature="e#7312#7762#0" />
-            <element signature="e#7811#8576#0" />
-            <element signature="e#8629#9131#0" />
-            <element signature="e#10245#10613#0" />
-            <element signature="n#style#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/day7/day7/code/edu_api/edu_api/apps/course/adminx.py" />
+    <entry file="file://$USER_HOME$/Desktop/day7/day7/code/src/components/CourseDetail.vue" />
     <entry file="file://$PROJECT_DIR$/edu_api/apps/course/adminx.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
@@ -486,98 +532,167 @@
     <entry file="file://$PROJECT_DIR$/edu_api/apps/cart/models.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/edu_api/apps/course/views.py">
+    <entry file="file://$USER_HOME$/Desktop/day7/day7/code/edu_api/edu_api/apps/cart/views.py" />
+    <entry file="file://$USER_HOME$/Desktop/day7/day7/code/edu_api/edu_api/apps/course/models.py" />
+    <entry file="file://$USER_HOME$/Desktop/day7/day7/code/src/components/common/CartItem.vue" />
+    <entry file="file://$PROJECT_DIR$/edu_api/apps/course/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+        <state relative-caret-position="7544">
+          <caret line="361" selection-start-line="361" selection-end-line="361" />
           <folding>
-            <element signature="e#0#63#0" expanded="true" />
+            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#3501#3695#0" />
+            <element signature="e#3730#4873#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/edu_api/settings/develop.py">
+    <entry file="file://$USER_HOME$/Desktop/day8(1)/day8/order.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3059">
-          <caret line="136" column="14" selection-start-line="136" selection-start-column="14" selection-end-line="136" selection-end-column="14" />
+        <state relative-caret-position="-1030">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu_api/apps/order/adminx.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
           <folding>
-            <element signature="e#305#320#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu_api/apps/order/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu_api/apps/order/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="43" selection-start-column="43" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu_api/apps/user/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="26" column="24" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu_api/apps/course/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="104" selection-start-line="6" selection-start-column="104" selection-end-line="6" selection-end-column="104" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/edu_api/apps/course/serializer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-63">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="437">
+          <caret line="19" column="39" lean-forward="true" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
           <folding>
             <element signature="e#0#54#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/logs/lesson_api.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="192">
+          <caret line="3181" column="72" selection-start-line="3181" selection-start-column="72" selection-end-line="3181" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu_api/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+          <folding>
+            <element signature="e#631#644#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu_api/settings/develop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="222" column="33" lean-forward="true" selection-start-line="222" selection-start-column="33" selection-end-line="222" selection-end-column="33" />
+          <folding>
+            <element signature="e#305#320#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/edu_api/apps/cart/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="66" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="66" />
+        <state relative-caret-position="161">
+          <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/day7/day7/code/edu_api/edu_api/apps/cart/views.py">
+    <entry file="file://$PROJECT_DIR$/edu_api/apps/order/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="123" column="48" lean-forward="true" selection-start-line="123" selection-start-column="48" selection-end-line="123" selection-end-column="48" />
+        <state relative-caret-position="147">
+          <caret line="49" column="10" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="10" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <element signature="e#3157#3864#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/day7/day7/code/edu_api/edu_api/apps/course/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="160" column="4" selection-start-line="160" selection-start-column="4" selection-end-line="214" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-            <element signature="e#4020#5527#0" />
-            <element signature="e#5583#7478#0" />
-            <element signature="e#8500#9252#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/day7/day7/code/src/components/common/CartItem.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edu_api/apps/course/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="149" column="35" lean-forward="true" selection-start-line="149" selection-start-column="35" selection-end-line="149" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-            <element signature="e#3501#3695#0" />
-            <element signature="e#3730#4873#0" />
-            <element signature="e#5250#6002#0" />
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/edu_api/apps/cart/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="107" column="41" lean-forward="true" selection-start-line="107" selection-start-column="41" selection-end-line="107" selection-end-column="41" />
+        <state>
+          <caret line="88" selection-start-line="88" selection-end-line="107" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <element signature="e#2658#3262#0" />
-            <element signature="e#3304#3547#0" />
+            <element signature="e#477#1590#0" />
+            <element signature="e#1634#2821#0" />
+            <element signature="e#2869#3488#0" />
+            <element signature="e#3536#4383#0" />
+            <element signature="e#5061#6871#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu_api/apps/order/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu_api/apps/order/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edu_api/apps/order/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="79" column="34" lean-forward="true" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
