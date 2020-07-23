@@ -80,8 +80,10 @@ class SendMessageAPIView(APIView):
         redis_connection.setex("sms_%s" % mobile, constants.SMS_EXPIRE_TIME, code)
         redis_connection.setex("mobile_%s" % mobile, constants.MOBILE_EXPIRE_TIME, code)
         try:
-            message = Message(constants.API_KEY)
-            message.send_message(mobile, code)
+            from my_task.sms.tasks import send_sms
+            send_sms.delay(mobile,code)
+            # message = Message(constants.API_KEY)
+            # message.send_message(mobile, code)
         except:
             return Response({"message": "短信发送失败"}, status=http_status.HTTP_500_INTERNAL_SERVER_ERROR)
 

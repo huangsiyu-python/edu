@@ -7,6 +7,7 @@ class BannerModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = Banner
         fields = ("img", 'link')
+        
 class NavModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = Nav

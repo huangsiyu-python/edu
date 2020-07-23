@@ -72,14 +72,10 @@ class OrderModelSerializer(serializers.ModelSerializer):
                         raise serializers.ValidationError("订单生成失败")
                     order.total_price += float(original_price)
                     order.real_price += float(real_expire_price)
+                    pipe = redis_connection.pipeline()
+                    pipe.multi()
+                    pipe.hdel('cart_%s' % user_id, course_id)
+                    pipe.srem("selected_%s" % user_id, course_id)
+                    pipe.execute()
                 order.save()
-            # cart_id=redis_connection.smembers("%s_selected" % user_id)
-            # pipeline=redis_connection.pipeline
-            # for key in cart_id:
-            #     course_id=int(key)
-            #     print(course_id)
-            #     pipeline.multi()
-            #     pipeline.hdel("%s_cart" % user_id,course_id)
-            #     pipeline.srem("%s_selected" % user_id,course_id)
-            #     pipeline.execute()
             return order

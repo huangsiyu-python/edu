@@ -64,15 +64,21 @@
         // let token = localStorage.user_token || sessionStorage.user_token;
         this.$axios.post(`${this.$settings.HOST}order/option/`, {
           pay_type:this.pay_type},{
-          // data: {
-          //   pay_type: this.pay_type,
-          // },
-
           headers: {
             "Authorization": "jwt " + this.token,
           }
         }).then(response => {
-          this.$message.success("支付成功")
+          this.$message.success("订单生成成功");
+          this.$axios.get(`${this.$settings.HOST}payments/ali_pay/`,{
+            params:{
+              order_number:response.data.order_number,
+            }
+          }).then(response=>{
+            location.href=response.data;
+          }).catch(error=>{
+            // console.log(error.response)
+            this.$message.error(error.response.data)
+          })
         }).catch(error => {
           this.$message.error("支付失败")
         })

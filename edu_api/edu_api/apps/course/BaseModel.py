@@ -2,7 +2,6 @@ from django.db import models
 
 
 class BaseModel(models.Model):
-    """基础表"""
     is_show = models.BooleanField(default=False, verbose_name="是否显示")
     orders = models.IntegerField(default=1, verbose_name="图片排序")
     is_delete = models.BooleanField(default=False, verbose_name="是否删除")

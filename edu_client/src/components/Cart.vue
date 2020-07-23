@@ -44,7 +44,8 @@
     data(){
       return{
         cart_list:[],
-        total_price:0.00
+        total_price:0.00,
+        course:""
       }
     },
     methods: {
@@ -89,6 +90,7 @@
         this.cart_list.splice(key,1);
         this.$store.commit("add_cart",this.cart_list.length);
         this.cart_total_price();
+        location.reload()
       },
     },
     components: {
